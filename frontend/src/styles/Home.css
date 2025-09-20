@@ -1,0 +1,81 @@
+/* Apply to entire document */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    /* overflow-x: hidden; Prevent horizontal scroll */
+    overflow-y: auto; /* Allow vertical scroll */
+    font-family: sans-serif;
+}
+
+/* Main container */
+.home-container {
+    min-height: 100vh;
+    background: #f3f4f6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    /* padding: 0 20px; 
+    position: fixed; */
+    margin-top: 400px;
+    top: 90px;
+    overflow-x: hidden; /* Just in case child elements overflow */
+}
+
+/* Header */
+.home-header {
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 24px 0;
+    text-align: center;
+    font-size: 2rem; /* reduce slightly for better fit */
+    font-weight: bold;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+/* Search bar */
+.search-bar1 {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    max-width: 100%; 
+    margin: 20px 0;
+    border-color: #000;
+}
+
+.search-bar1 input {
+    flex: 1;
+    width:90%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar1 button {
+    padding: 12px 24px;
+    font-size: 16px;
+    max-width: 10%;
+    /* background: #333; */
+    color: #333;;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    border-color: #000;
+}
+
+.search-bar1 button:hover {
+    background: #000;
+    color: white;
+}
+

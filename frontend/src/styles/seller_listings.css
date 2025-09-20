@@ -1,0 +1,104 @@
+/* Apply to entire document */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: sans-serif;
+}
+
+/* Main container */
+.home-container {
+    min-height: 100vh;
+    background: #f3f4f6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 0 20px; 
+    overflow-x: hidden; /* Just in case child elements overflow */
+}
+
+/* Header */
+.home-header {
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 24px 0;
+    text-align: center;
+    font-size: 2rem; /* reduce slightly for better fit */
+    font-weight: bold;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.product-list{
+    display: flex;
+    flex-direction: row; /* makes them lie horizontally */
+    gap: 16px;
+    flex-wrap: wrap; /* allows wrapping to the next line if needed */
+    align-items: stretch;
+}
+
+
+/* Search bar */
+.search-bar {
+    display: flex;
+    justify-content: space-between; 
+    width: 50%;
+    max-width: 100%; 
+    margin: 20px 0;
+}
+
+.search-bar input {
+    flex: 1;
+    width:80%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    padding: 12px 24px;
+    font-size: 16px;
+    max-width: 10%;
+    /* background: #333; */
+    color: #333;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background: #000;
+    color: white;
+}
+
+.product-card-accepted {
+    flex: 1 1 30%; /* Takes up more space, adjust the percentage based on the desired width */
+    max-width: 320px;
+    padding: 16px;
+    background: green;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.product-card-declined {
+    flex: 1 1 30%; /* Takes up more space, adjust the percentage based on the desired width */
+    max-width: 320px;
+    padding: 16px;
+    background: red;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+}
